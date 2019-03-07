@@ -1,8 +1,8 @@
+import '@babel/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '@babel/polyfill';
-import App from './App';
-import DefaultErrorBoundary from './DefaultErrorBoundary';
+import App from './components/App';
+import DefaultErrorBoundary from './components/DefaultErrorBoundary';
 import './styles.css';
 
 if (process.env.NODE_ENV !== 'production') {
@@ -11,10 +11,8 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <DefaultErrorBoundary>
-      <App />
-    </DefaultErrorBoundary>
-  </React.StrictMode>,
+  <DefaultErrorBoundary>
+    <App />
+  </DefaultErrorBoundary>,
   document.getElementById('app')
 );
