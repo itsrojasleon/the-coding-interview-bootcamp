@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Sidebar(props) {
+function Sidebar() {
   return <div>Sidebar</div>;
 }
 export default Sidebar;
