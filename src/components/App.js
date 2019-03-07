@@ -1,10 +1,13 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
+import Sidebar from './Sidebar';
+import Content from './Content';
 
 function App() {
   return (
     <div>
-      <h1 className="title">Hello World!</h1>
+      <Sidebar />
+      <Content />
     </div>
   );
 }
