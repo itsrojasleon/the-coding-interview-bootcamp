@@ -1,5 +1,5 @@
-import React from 'react';
-import propTypes from 'prop-types';
+import * as React from 'react';
+import * as propTypes from 'prop-types';
 
 export default class DefaultErrorBoundary extends React.Component {
   state = {

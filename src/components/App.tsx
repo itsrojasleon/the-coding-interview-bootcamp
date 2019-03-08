@@ -1,13 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import Sidebar from './Sidebar';
-import Content from './Content';
+import { Content } from './Content';
 
 function App() {
   return (
     <div>
       <Sidebar />
-      <Content />
+      <Content compiler="Typescript" framework="React" />
     </div>
   );
 }
