@@ -1,1 +1,1 @@
-# React Boilerplate
+# The coding interview bootcamp
