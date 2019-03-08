@@ -6,7 +6,8 @@ module.exports = merge(baseConfig, {
   devServer: {
     port: 3000,
     compress: true,
-    disableHostCheck: true
+    disableHostCheck: true,
+    historyApiFallback: true
   },
   devtool: 'source-map',
   resolve: {

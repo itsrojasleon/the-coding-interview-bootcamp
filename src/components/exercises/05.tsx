@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-function ReverseString3() {
+function ReverseString5() {
   return <div>ReverseString</div>;
 }
-const Title = 'Reverse String 3';
-export { ReverseString3, Title };
+const Title = 'Reverse String 5';
+export { ReverseString5, Title };
