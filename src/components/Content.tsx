@@ -1,12 +1,8 @@
 import * as React from 'react';
 
 export interface HelloProps {
-  compiler: string;
-  framework: string;
+  children: React.ReactNode;
 }
 
-export const Content = (props: HelloProps) => (
-  <h1>
-    Hello from {props.compiler} and {props.framework}!
-  </h1>
-);
+const Content = (props: HelloProps) => <div>{props.children}</div>;
+export default Content;

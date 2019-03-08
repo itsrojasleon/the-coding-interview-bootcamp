@@ -3,7 +3,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './components/App';
 import DefaultErrorBoundary from './components/DefaultErrorBoundary';
-import './styles.css';
+import './index.css';
 
 if (process.env.NODE_ENV !== 'production') {
   const axe = require('react-axe');

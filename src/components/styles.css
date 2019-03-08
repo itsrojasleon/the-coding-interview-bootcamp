@@ -1,0 +1,13 @@
+/* App */
+.container {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  width: 85%;
+  margin: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  border-right: 1px solid var(--border-color);
+  height: 100vh;
+}
