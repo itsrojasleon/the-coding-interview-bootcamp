@@ -1,7 +1,10 @@
 import * as React from 'react';
 
 function ReverseString2() {
-  return <div>ReverseString</div>;
+  return <div>ReverseString 2</div>;
 }
-const Title = 'Reverse String 2';
-export { ReverseString2, Title };
+function Usage() {
+  return <ReverseString2 />;
+}
+Usage.title = 'Reverse String 2';
+export { ReverseString2, Usage as default };

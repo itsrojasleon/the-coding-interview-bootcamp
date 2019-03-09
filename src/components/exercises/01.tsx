@@ -1,7 +1,14 @@
 import * as React from 'react';
 
 function ReverseString() {
-  return <div>ReverseString</div>;
+  return (
+    <div>
+      <div>okowksowkskwoskwos</div>
+    </div>
+  );
 }
-const Title = 'Reverse String 1';
-export { ReverseString, Title };
+function Usage() {
+  return <ReverseString />;
+}
+Usage.title = 'Reverse String 1';
+export { ReverseString, Usage as default };
