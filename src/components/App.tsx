@@ -25,7 +25,6 @@ const pages = files.reduce((p: any, filename, index, fullArray) => {
   };
   return p;
 }, {});
-console.log(pages);
 
 const filesAndTitles = files.map(filename => ({
   title: pages[filename].title,
@@ -50,7 +49,6 @@ function App() {
                 path="/:id"
                 render={props => {
                   const { id } = props.match.params;
-                  const { exercise } = pages[id];
                   const {
                     exercise: { default: Exercise }
                   } = pages[id];
