@@ -17,6 +17,15 @@
   border-bottom: 1px solid rgb(242, 242, 242);
   margin-bottom: 10px;
 }
+.link-to-github {
+  color: black;
+}
+.fa-github {
+  font-size: 26px;
+}
+.fa-github:hover {
+  cursor: pointer;
+}
 
 /* Sidebar */
 .sidebar {
@@ -31,7 +40,7 @@
 .link {
   color: black;
   text-decoration: none;
-  margin-bottom: 8px;
+  line-height: 40px;
   color: #444;
 }
 .link:hover {

@@ -5,7 +5,13 @@ function Header() {
     <div className="header">
       <h1>The coding interview bootcamp</h1>
       <div className="links">
-        <i className="fab fa-github" />
+        <a
+          href="https://github.com/rojasleon/the-coding-interview-bootcamp"
+          target="_blank"
+          className="link-to-github"
+        >
+          <i className="fab fa-github" />
+        </a>
       </div>
     </div>
   );
