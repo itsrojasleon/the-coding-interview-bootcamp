@@ -52,7 +52,9 @@ function App() {
                   exact
                   path="/:id"
                   render={props => {
+                    // get the id from the url
                     const { id } = props.match.params;
+                    // get my component from pages
                     const {
                       exercise: { default: Exercise }
                     } = pages[id];
