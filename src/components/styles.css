@@ -6,9 +6,34 @@
   margin: auto;
 }
 
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgb(242, 242, 242);
+  margin-bottom: 10px;
+}
+
 /* Sidebar */
 .sidebar {
   border-right: 1px solid var(--border-color);
   height: 100vh;
   text-align: left;
+}
+.links-container {
+  display: flex;
+  flex-direction: column;
+}
+.link {
+  color: black;
+  text-decoration: none;
+  margin-bottom: 8px;
+  color: #444;
+}
+.link:hover {
+  text-decoration: underline;
 }

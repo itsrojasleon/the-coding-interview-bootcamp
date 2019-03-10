@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
+
 import Sidebar from './Sidebar';
+import Header from './Header';
 import Content from './Content';
 
 import './styles.css';
@@ -37,33 +39,36 @@ function Home() {
 
 function App() {
   return (
-    <div className="container">
-      <Router>
-        <React.Fragment>
-          <Sidebar filesAndTitles={filesAndTitles} />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Content>
-              <Route
-                exact
-                path="/:id"
-                render={props => {
-                  const { id } = props.match.params;
-                  const {
-                    exercise: { default: Exercise }
-                  } = pages[id];
-                  return (
-                    <div>
-                      <div>{pages[id].title}</div>
-                      <Exercise />
-                    </div>
-                  );
-                }}
-              />
-            </Content>
-          </Switch>
-        </React.Fragment>
-      </Router>
+    <div>
+      <Header />
+      <div className="container">
+        <Router>
+          <React.Fragment>
+            <Sidebar filesAndTitles={filesAndTitles} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Content>
+                <Route
+                  exact
+                  path="/:id"
+                  render={props => {
+                    const { id } = props.match.params;
+                    const {
+                      exercise: { default: Exercise }
+                    } = pages[id];
+                    return (
+                      <div>
+                        <div>{pages[id].title}</div>
+                        <Exercise />
+                      </div>
+                    );
+                  }}
+                />
+              </Content>
+            </Switch>
+          </React.Fragment>
+        </Router>
+      </div>
     </div>
   );
 }

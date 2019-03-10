@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
 :root {
   --border-color: rgb(233, 233, 233);
 }
 html {
   box-sizing: border-box;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 *,
