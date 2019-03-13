@@ -4,7 +4,9 @@ import Code from '../Code';
 function ReverseString() {
   return (
     <div>
-      <Code>okowksowkskwoskwos</Code>
+      <Code>
+        <span>function reverseString(str) {}</span>
+      </Code>
     </div>
   );
 }
