@@ -5,7 +5,18 @@ function ReverseString() {
   return (
     <div>
       <Code>
-        <span>function reverseString(str) {}</span>
+        <span className="comment">// Reverse String (1)</span>
+        <br />
+        <br />
+        <span className="keyword">function</span> reverseString(
+        <span className="parameter">str</span>) {'{'}
+        <br />
+        <span style={{ marginLeft: 20 }}>
+          <span>return </span>
+          <span>str.split('').reverse().join('')</span>
+        </span>
+        <br />
+        {'}'}
       </Code>
     </div>
   );
@@ -13,5 +24,5 @@ function ReverseString() {
 function Usage() {
   return <ReverseString />;
 }
-Usage.title = 'Reverse String 1';
+Usage.title = 'Reverse String';
 export { ReverseString, Usage as default };

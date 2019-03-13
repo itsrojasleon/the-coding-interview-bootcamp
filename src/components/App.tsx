@@ -59,8 +59,8 @@ function App() {
                       exercise: { default: Exercise }
                     } = pages[id];
                     return (
-                      <div>
-                        <div>{pages[id].title}</div>
+                      <div className="content">
+                        <div className="title">{pages[id].title}</div>
                         <Exercise />
                       </div>
                     );

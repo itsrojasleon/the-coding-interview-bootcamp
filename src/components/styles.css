@@ -5,6 +5,13 @@
   width: 85%;
   margin: auto;
 }
+.content {
+  margin: 10px;
+}
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
 /* Header */
 .header {
@@ -51,7 +58,7 @@
 .highlight {
   margin-bottom: 1rem;
   background-color: #f7f7f9;
-  padding: 1.5rem;
+  padding: 0.3rem;
 }
 .highlight > pre {
   padding: 0;
@@ -63,10 +70,25 @@
   font-size: 87.5%;
   color: #212529;
   white-space: pre;
-  margin: 1em 0px;
+  margin: 0.5em 0.5em;
 }
 .highlight > pre > code {
   font-size: inherit;
   color: #212529;
   word-break: normal;
+  font-family: Consolas, Liberation Mono, Menlo, Courier, monospace;
+}
+.keyword {
+  font-weight: bold;
+  color: #a71d5d;
+}
+.parameter {
+  color: #0086b3;
+}
+.string {
+  color: #df5000;
+}
+.comment {
+  color: #969896;
+  white-space: pre-line;
 }
