@@ -60,7 +60,7 @@ function App() {
                     } = pages[id];
                     return (
                       <div className="content">
-                        <div className="title">{pages[id].title}</div>
+                        <div className="title">{pages[id].title}.</div>
                         <Exercise />
                       </div>
                     );
