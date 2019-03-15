@@ -7,7 +7,7 @@ import Comment from '../markdown/Comment';
 import Keyword from '../markdown/Keyword';
 import Parameter from '../markdown/Parameter';
 
-// Comments
+// https://repl.it/@rojasleon/ReverseString
 
 function ReverseString() {
   return (
@@ -36,6 +36,12 @@ function ReverseString() {
         {'}'}
       </Code>
       {/* Exercise number 2 */}
+      <a
+        className="external-url"
+        href="https://repl.it/@rojasleon/ReverseString"
+      >
+        <i className="fas fa-external-link-alt" />
+      </a>
     </div>
   );
 }
