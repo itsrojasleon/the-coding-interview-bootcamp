@@ -19,10 +19,10 @@ function ReverseString() {
       {/* Exercise number 1 */}
       <Code>
         <Comment>// Reverse String (1)</Comment>
-        <Jump />
+        <Jump jumps={2} />
         <Keyword>function</Keyword> reverseString(
         <Parameter>str</Parameter>) {'{'}
-        <br />
+        <Jump jumps={1} />
         <span style={{ marginLeft: 20 }}>
           <span>return </span>
           <span>
@@ -32,7 +32,7 @@ function ReverseString() {
             <String />)
           </span>
         </span>
-        <br />
+        <Jump jumps={1} />
         {'}'}
       </Code>
       {/* Exercise number 2 */}

@@ -1,11 +1,20 @@
 import * as React from 'react';
 
-function Jump() {
+export interface Props {
+  jumps: number;
+}
+
+function Jump(props: Props) {
+  let element = [];
+  for (let i = 0; i < props.jumps; i++) {
+    element.push(<br />);
+  }
   return (
-    <>
-      <br />
-      <br />
-    </>
+    <React.Fragment>
+      {element.map((e, i) => (
+        <span key={i}>{e}</span>
+      ))}
+    </React.Fragment>
   );
 }
 export default Jump;
