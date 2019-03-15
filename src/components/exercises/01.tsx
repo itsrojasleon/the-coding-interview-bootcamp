@@ -29,8 +29,7 @@ function ReverseString() {
             str.split(
             <String />
             ).reverse().join(
-            <String />
-            >)
+            <String />)
           </span>
         </span>
         <br />
