@@ -24,12 +24,32 @@ function ReverseString() {
         <Jump jumps={1} />
         <span style={{ marginLeft: 20 }}>
           <span>return </span>
-          <span>
+          <>
             str.split(
             <String />
             ).reverse().join(
             <String />)
-          </span>
+          </>
+        </span>
+        <Jump jumps={1} />
+        {'}'}
+      </Code>
+      {/* Exercise number 2 */}
+      <Code>
+        <Comment>// Reverse String (2)</Comment>
+        <Jump jumps={2} />
+        <Keyword>function</Keyword> reverseString(
+        <Parameter>str</Parameter>) {'{'}
+        <Jump jumps={1} />
+        <span style={{ marginLeft: 20 }}>
+          <Keyword>let </Keyword>reversed = <String />
+          <Jump jumps={1} />
+          <>
+            str.split(
+            <String />
+            ).reverse().join(
+            <String />)
+          </>
         </span>
         <Jump jumps={1} />
         {'}'}
