@@ -41,17 +41,20 @@ function ReverseString() {
         <Keyword>function</Keyword> reverseString(
         <Parameter>str</Parameter>) {'{'}
         <Jump jumps={1} />
-        <span style={{ marginLeft: 20 }}>
+        <div style={{ marginLeft: 20 }}>
           <Keyword>let </Keyword>reversed = <String />
+          <Jump jumps={2} />
+          <Keyword>for</Keyword>(<Keyword>let </Keyword>character of{' '}
+          <Parameter>str</Parameter>){`{`}
           <Jump jumps={1} />
-          <>
-            str.split(
-            <String />
-            ).reverse().join(
-            <String />)
-          </>
-        </span>
-        <Jump jumps={1} />
+          <span style={{ marginLeft: 20 }}>
+            reversed = character + reversed
+          </span>
+          <Jump jumps={1} />
+          {`}`}
+          <Jump jumps={1} />
+          <Keyword>return </Keyword>reversed
+        </div>
         {'}'}
       </Code>
       {/* Exercise number 2 */}
