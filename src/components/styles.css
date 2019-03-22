@@ -125,3 +125,13 @@
   padding: 15px;
   border-radius: 50%;
 }
+
+/* Method.tsx */
+.method {
+  color: #009926;
+}
+
+/* MarginLeft */
+.margin-left {
+  margin-left: 20px;
+}

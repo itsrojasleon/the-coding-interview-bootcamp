@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Code from '../Code';
+import Code from '../markdown/Code';
 import Steps from '../markdown/Steps';
 import String from '../markdown/String';
 import Jump from '../markdown/Jump';
@@ -7,6 +7,7 @@ import Comment from '../markdown/Comment';
 import Keyword from '../markdown/Keyword';
 import Parameter from '../markdown/Parameter';
 import ExternalUrl from '../markdown/ExternalUrl';
+import Method from '../markdown/Method';
 
 function ReverseString() {
   return (
@@ -25,9 +26,9 @@ function ReverseString() {
         <span style={{ marginLeft: 20 }}>
           <span>return </span>
           <>
-            str.split(
+            str.<Method>split</Method>(
             <String />
-            ).reverse().join(
+            ).<Method>reverse</Method>().<Method>join</Method>(
             <String />)
           </>
         </span>
@@ -57,7 +58,22 @@ function ReverseString() {
         </div>
         {'}'}
       </Code>
-      {/* Exercise number 2 */}
+      {/* Exercise number 3 */}
+      <Code>
+        <Comment>// Reverse String (3)</Comment>
+        <Jump jumps={2} />
+        <Keyword>function</Keyword> reverseString(<Parameter>str</Parameter>)
+        {`{`}
+        <Jump jumps={1} />
+        <div style={{ marginLeft: 20 }}>
+          return <Parameter>str</Parameter>.<Method>split</Method>(
+          <String />
+          ).<Method>reduce</Method>((<Parameter>rev</Parameter>,{' '}
+          <Parameter>char</Parameter>) => char + rev, <String />)
+          <Jump jumps={1} />
+        </div>
+        {`}`}
+      </Code>
       <ExternalUrl url="https://repl.it/@rojasleon/ReverseString" />
     </div>
   );
