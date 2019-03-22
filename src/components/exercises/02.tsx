@@ -21,7 +21,22 @@ function ReverseString2() {
       </Steps>
       {/* Exercise number 1 */}
       <Code>
-        <Comment>// Polindrome 1</Comment>
+        <Comment>Polindrome 1</Comment>
+        <Jump jumps={2} />
+        <Keyword>function </Keyword>(<Parameter>str</Parameter>) {'{'}
+        <Jump jumps={1} />
+        <MarginLeft>
+          <Keyword>const</Keyword> reversed str.<Method>split</Method>(
+          <String />
+          ).
+          <Method>reverse</Method>().<Method>join</Method>(<String />)
+          <Jump jumps={1} />
+          return str === reversed
+        </MarginLeft>
+      </Code>
+      {/* Exercise number 2 */}
+      <Code>
+        <Comment>// Polindrome 2</Comment>
         <Jump jumps={2} />
         <Keyword>function </Keyword>(<Parameter>str</Parameter>) {'{'}
         <Jump jumps={1} />
