@@ -8,6 +8,7 @@ import Keyword from '../markdown/Keyword';
 import Parameter from '../markdown/Parameter';
 import ExternalUrl from '../markdown/ExternalUrl';
 import Method from '../markdown/Method';
+import MarginLeft from '../markdown/MarginLeft';
 
 function ReverseString() {
   return (
@@ -23,7 +24,7 @@ function ReverseString() {
         <Keyword>function</Keyword> reverseString(
         <Parameter>str</Parameter>) {'{'}
         <Jump jumps={1} />
-        <span style={{ marginLeft: 20 }}>
+        <MarginLeft>
           <span>return </span>
           <>
             str.<Method>split</Method>(
@@ -31,8 +32,7 @@ function ReverseString() {
             ).<Method>reverse</Method>().<Method>join</Method>(
             <String />)
           </>
-        </span>
-        <Jump jumps={1} />
+        </MarginLeft>
         {'}'}
       </Code>
       {/* Exercise number 2 */}
@@ -42,20 +42,17 @@ function ReverseString() {
         <Keyword>function</Keyword> reverseString(
         <Parameter>str</Parameter>) {'{'}
         <Jump jumps={1} />
-        <div style={{ marginLeft: 20 }}>
+        <MarginLeft>
           <Keyword>let </Keyword>reversed = <String />
           <Jump jumps={2} />
           <Keyword>for</Keyword>(<Keyword>let </Keyword>character of{' '}
           <Parameter>str</Parameter>){`{`}
           <Jump jumps={1} />
-          <span style={{ marginLeft: 20 }}>
-            reversed = character + reversed
-          </span>
-          <Jump jumps={1} />
+          <MarginLeft>reversed = character + reversed</MarginLeft>
           {`}`}
           <Jump jumps={1} />
           <Keyword>return </Keyword>reversed
-        </div>
+        </MarginLeft>
         {'}'}
       </Code>
       {/* Exercise number 3 */}
@@ -65,13 +62,13 @@ function ReverseString() {
         <Keyword>function</Keyword> reverseString(<Parameter>str</Parameter>)
         {`{`}
         <Jump jumps={1} />
-        <div style={{ marginLeft: 20 }}>
+        <MarginLeft>
           return <Parameter>str</Parameter>.<Method>split</Method>(
           <String />
           ).<Method>reduce</Method>((<Parameter>rev</Parameter>,{' '}
-          <Parameter>char</Parameter>) => char + rev, <String />)
+          <Parameter>char</Parameter>) => char + /> rev, <String />)
           <Jump jumps={1} />
-        </div>
+        </MarginLeft>
         {`}`}
       </Code>
       <ExternalUrl url="https://repl.it/@rojasleon/ReverseString" />

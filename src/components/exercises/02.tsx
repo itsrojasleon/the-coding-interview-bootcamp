@@ -29,7 +29,7 @@ function ReverseString2() {
           return str.<Method>split</Method>(<String />
           ).<Method>every</Method>((<Parameter>char</Parameter>,{' '}
           <Parameter>i</Parameter>) => {'{'}
-          <MarginLeft>return char === str[str.length - i -1]</MarginLeft>
+          <MarginLeft>return char === str[str.length - i - 1]</MarginLeft>
           {'}'})
         </MarginLeft>
         {'}'}

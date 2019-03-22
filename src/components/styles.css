@@ -135,3 +135,8 @@
 .margin-left {
   margin-left: 20px;
 }
+
+/* Symbol.tsx */
+.symbol {
+  color: #795da3;
+}
