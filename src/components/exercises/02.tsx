@@ -10,7 +10,7 @@ import String from '../markdown/String';
 import MarginLeft from '../markdown/MarginLeft';
 import ExternalUrl from '../markdown/ExternalUrl';
 
-function ReverseString2() {
+function Palindrome() {
   return (
     <div>
       <Steps>
@@ -54,7 +54,7 @@ function ReverseString2() {
   );
 }
 function Usage() {
-  return <ReverseString2 />;
+  return <Palindrome />;
 }
 Usage.title = 'Palindrome';
-export { ReverseString2, Usage as default };
+export { Palindrome, Usage as default };

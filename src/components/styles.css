@@ -79,6 +79,7 @@
   color: #212529;
   word-break: normal;
   font-family: Consolas, Liberation Mono, Menlo, Courier, monospace;
+  line-height: 1.5em;
 }
 
 /* Keyword.tsx */
