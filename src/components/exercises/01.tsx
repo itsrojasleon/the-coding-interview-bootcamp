@@ -66,7 +66,7 @@ function ReverseString() {
           return <Parameter>str</Parameter>.<Method>split</Method>(
           <String />
           ).<Method>reduce</Method>((<Parameter>rev</Parameter>,{' '}
-          <Parameter>char</Parameter>) => char + /> rev, <String />)
+          <Parameter>char</Parameter>) => char + rev, <String />)
           <Jump jumps={1} />
         </MarginLeft>
         {`}`}
