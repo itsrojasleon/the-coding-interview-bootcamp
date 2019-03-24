@@ -30,6 +30,7 @@ function ReverseInt() {
         </MarginLeft>
         {'}'}
       </Code>
+      <ExternalUrl url="https://repl.it/@rojasleon/ReverseInt" />
     </div>
   );
 }
