@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BrotliPlugin = require('brotli-webpack-plugin');
+// const BrotliPlugin = require('brotli-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
@@ -37,12 +37,6 @@ module.exports = {
       template: './src/index.html'
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new BrotliPlugin({
-      asset: '[path].br[query]',
-      test: /\.(js|css|html|svg)$/,
-      threshold: 10240,
-      minRatio: 0.8
-    }),
     new ForkTsCheckerWebpackPlugin({
       mdx: true,
       compilerOptions: {
