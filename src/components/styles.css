@@ -81,36 +81,6 @@
   font-family: Consolas, Liberation Mono, Menlo, Courier, monospace;
   line-height: 1.5em;
 }
-
-/* Keyword.tsx */
-.keyword {
-  font-weight: bold;
-  color: #a71d5d;
-}
-
-/* Parameter.tsx */
-.parameter {
-  color: #0086b3;
-}
-
-/* String.tsx */
-.string {
-  color: #df5000;
-}
-
-/* Comment.tsx */
-.comment {
-  color: #969896;
-  white-space: pre-line;
-}
-
-/* Steps.tsx */
-.steps {
-  color: #333;
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
 /* ExternalUrl.tsx */
 .external-url {
   position: fixed;
@@ -125,19 +95,4 @@
   cursor: pointer;
   padding: 15px;
   border-radius: 50%;
-}
-
-/* Method.tsx */
-.method {
-  color: #009926;
-}
-
-/* MarginLeft */
-.margin-left {
-  margin-left: 20px;
-}
-
-/* Symbol.tsx */
-.symbol {
-  color: #795da3;
 }

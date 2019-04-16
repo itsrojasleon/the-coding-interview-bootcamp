@@ -3,3 +3,4 @@ dist
 build
 yarn.lock
 .DS_Store
+yarn-error.log

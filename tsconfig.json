@@ -7,5 +7,6 @@
     "target": "es5",
     "jsx": "react"
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", "./mdx.d.ts", "./ambient.d.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

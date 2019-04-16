@@ -11,6 +11,9 @@ module.exports = merge(baseConfig, {
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
   }
 });

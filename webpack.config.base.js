@@ -1,7 +1,8 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -24,6 +25,10 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loader: 'awesome-typescript-loader'
+      },
+      {
+        test: /\.mdx?$/,
+        use: ['babel-loader', '@mdx-js/loader']
       }
     ]
   },
@@ -37,6 +42,12 @@ module.exports = {
       test: /\.(js|css|html|svg)$/,
       threshold: 10240,
       minRatio: 0.8
+    }),
+    new ForkTsCheckerWebpackPlugin({
+      mdx: true,
+      compilerOptions: {
+        noImplicitAny: false
+      }
     })
   ]
 };

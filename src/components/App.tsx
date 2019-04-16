@@ -1,12 +1,20 @@
+import { hot } from 'react-hot-loader';
 import * as React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { hot } from 'react-hot-loader';
+import { MDXProvider } from '@mdx-js/react';
 
 import Sidebar from './Sidebar';
 import Header from './Header';
 import Content from './Content';
 
 import './styles.css';
+
+import { Pre } from './markdown/index';
+
+const components = {
+  pre: (props: any) => <div {...props} />,
+  code: (props: any) => <Pre {...props} />
+};
 
 let files: string[] = ['01', '02', '03', '04', '05'];
 
@@ -61,7 +69,9 @@ function App() {
                     return (
                       <div className="content">
                         <div className="title">{pages[id].title}.</div>
-                        <Exercise />
+                        <MDXProvider components={components}>
+                          <Exercise />
+                        </MDXProvider>
                       </div>
                     );
                   }}
