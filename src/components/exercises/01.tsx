@@ -7,7 +7,7 @@ function ReverseString() {
   return (
     <div>
       <ReverseStringMD />
-      <ExternalUrl url="https://repl.it/@rojasleon/ReverseString" />
+      <ExternalUrl url="https://repl.it/@rojasleon/01-ReverseString" />
     </div>
   );
 }
