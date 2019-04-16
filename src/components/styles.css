@@ -6,12 +6,13 @@
   margin: auto;
 }
 .content {
-  margin: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 .title {
   font-size: 22px;
   margin-bottom: 10px;
-  color: #e25e5e;
+  color: var(--title-color);
 }
 
 /* Header */
@@ -22,8 +23,7 @@
   margin: auto;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid rgb(242, 242, 242);
-  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
 }
 .link-to-github {
   color: black;
@@ -33,6 +33,9 @@
 }
 .fa-github:hover {
   cursor: pointer;
+}
+.title-bootcamp {
+  color: var(--title-bootcamp-color);
 }
 
 /* Sidebar */
@@ -53,33 +56,7 @@
 }
 .link:hover {
   text-decoration: underline;
-}
-
-/* Code */
-.highlight {
-  margin-bottom: 1rem;
-  background-color: #f7f7f9;
-  padding: 0.3rem;
-  font-size: 20px;
-}
-.highlight > pre {
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-  border: 0;
-  display: block;
-  font-size: 87.5%;
-  color: #212529;
-  white-space: pre;
-  margin: 0.5em 0.5em;
-}
-.highlight > pre > code {
-  font-size: inherit;
-  color: #212529;
-  word-break: normal;
-  font-family: Consolas, Liberation Mono, Menlo, Courier, monospace;
-  line-height: 1.5em;
+  color: var(--link-color);
 }
 /* ExternalUrl.tsx */
 .external-url {
@@ -90,7 +67,7 @@
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: black;
+  background-color: var(--bg-external-url);
   color: white;
   cursor: pointer;
   padding: 15px;

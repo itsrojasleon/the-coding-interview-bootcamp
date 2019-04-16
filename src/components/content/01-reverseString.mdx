@@ -1,6 +1,30 @@
-# Hello MDXComponent
+_Given a string, return a new string with the reversed order of characters._
+
+> _Three diferents ways_
 
 ```
-// Reverse a string
-ok
+// First (🍏)
+function reverseString(str) {
+  return str
+    .split('')
+    .reverse()
+    .join()
+}
+
+// Second (🍎)
+function reverseString(str) {
+  let reversed = '';
+
+  for (let char of str) {
+    reversed = char + reversed;
+  }
+  return reversed
+}
+
+// Third (🍐)
+function reverseString(str) {
+  return str
+    .split('')
+    .reduce((rev, char) => char + rev, '');
+}
 ```
