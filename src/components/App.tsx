@@ -9,11 +9,12 @@ import Content from './Content';
 
 import './styles.css';
 
-import { Pre } from './markdown/index';
+import { CodeBlock } from './markdown/index';
 
 const components = {
+  h1: (props: any) => <h1 style={{ color: 'tomato' }} {...props} />,
   pre: (props: any) => <div {...props} />,
-  code: (props: any) => <Pre {...props} />
+  code: CodeBlock
 };
 
 let files: string[] = ['01', '02', '03', '04', '05'];

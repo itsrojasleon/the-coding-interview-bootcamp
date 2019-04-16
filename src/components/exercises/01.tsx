@@ -1,12 +1,12 @@
 import * as React from 'react';
 import ExternalUrl from '../ExternalUrl';
 // rs = reverse String
-import RS from '../markdown/reverseString.mdx';
+import ReverseStringMD from '../content/01-reverseString.mdx';
 
 function ReverseString() {
   return (
     <div>
-      <RS />
+      <ReverseStringMD />
       <ExternalUrl url="https://repl.it/@rojasleon/ReverseString" />
     </div>
   );

@@ -27,7 +27,7 @@ module.exports = {
         loader: 'awesome-typescript-loader'
       },
       {
-        test: /\.mdx?$/,
+        test: /.mdx?$/,
         use: ['babel-loader', '@mdx-js/loader']
       }
     ]
