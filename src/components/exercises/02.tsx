@@ -1,10 +1,12 @@
 import * as React from 'react';
+import PalindromeMDX from '../content/02-palindrome.mdx';
 import ExternalUrl from '../ExternalUrl';
 
 function Palindrome() {
   return (
     <div>
-      <ExternalUrl url="https://repl.it/@rojasleon/Palindrome" />
+      <PalindromeMDX />
+      <ExternalUrl url="https://repl.it/@rojasleon/02-Palindrome" />
     </div>
   );
 }

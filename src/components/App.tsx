@@ -9,7 +9,7 @@ import Content from './Content';
 
 import './styles.css';
 
-import { CodeBlock } from './markdown/index';
+import { CodeBlock } from './markdown/CodeBlock';
 
 const components = {
   h1: (props: any) => <h1 style={{ color: 'tomato' }} {...props} />,
