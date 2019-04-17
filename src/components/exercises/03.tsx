@@ -1,10 +1,12 @@
 import * as React from 'react';
+import ReverseIntMDX from '../content/03-reverseInt.mdx';
 import ExternalUrl from '../ExternalUrl';
 
 function ReverseInt() {
   return (
     <div>
-      <ExternalUrl url="https://repl.it/@rojasleon/ReverseInt" />
+      <ReverseIntMDX />
+      <ExternalUrl url="https://repl.it/@rojasleon/03-ReverseInt" />
     </div>
   );
 }
