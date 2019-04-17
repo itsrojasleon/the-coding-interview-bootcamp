@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import darkTheme from 'prism-react-renderer/themes/duotoneDark';
 
 export interface Props {
   props: React.ReactNode;
