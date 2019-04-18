@@ -12,21 +12,24 @@
 .title {
   font-size: 22px;
   margin-bottom: 10px;
-  color: var(--title-color);
+  color: #9effff;
 }
 
 /* Header */
 .header {
+  width: 100%;
+  background-color: var(--background-dark);
+}
+.nav {
   display: flex;
   justify-content: space-between;
   width: 85%;
   margin: auto;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid var(--border-color);
 }
 .link-to-github {
-  color: black;
+  color: white;
 }
 .fa-github {
   font-size: 26px;
@@ -35,12 +38,12 @@
   cursor: pointer;
 }
 .title-bootcamp {
-  color: var(--title-bootcamp-color);
+  color: white;
 }
 
 /* Sidebar */
 .sidebar {
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid var(--background-dark);
   height: 100vh;
   text-align: left;
 }
@@ -52,11 +55,11 @@
   color: black;
   text-decoration: none;
   line-height: 40px;
-  color: #444;
+  color: white;
+  font-size: 17px;
 }
 .link:hover {
   text-decoration: underline;
-  color: var(--link-color);
 }
 /* ExternalUrl.tsx */
 .external-url {
@@ -67,9 +70,17 @@
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: var(--bg-external-url);
+  background-color: var(--background-dark);
   color: white;
   cursor: pointer;
   padding: 15px;
   border-radius: 50%;
+}
+
+/* MDX Files */
+.instructions {
+  color: white;
+}
+.ways {
+  color: #ffee80;
 }

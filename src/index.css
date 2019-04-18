@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 
 :root {
-  --border-color: rgb(230, 230, 230);
-  --bg-external-url: #ff628c;
-  --title-color: #ec3a37f5;
+  --background-dark: #1e1e3f;
+  --background: #2d2b55;
   --title-bootcamp-color: #1e1e3f;
-  --link-color: #fad000;
+  --contrast: #fad000;
 }
 html {
   box-sizing: border-box;
@@ -31,6 +30,10 @@ ol,
 ul {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background: var(--background);
 }
 
 ol,
