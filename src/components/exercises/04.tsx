@@ -1,10 +1,12 @@
 import * as React from 'react';
+import MaxCharMDX from '../content/04-maxChar.mdx';
 import ExternalUrl from '../ExternalUrl';
 
 function MaxChar() {
   return (
     <div>
-      <ExternalUrl url="https://repl.it/@rojasleon/MaxChar" />
+      <MaxCharMDX />
+      <ExternalUrl url="https://repl.it/@rojasleon/04-MaxChar" />
     </div>
   );
 }
