@@ -1,10 +1,17 @@
 import * as React from 'react';
+import FizzBuzzMDX from '../content/05-fizzBuzz.mdx';
+import ExternalUrl from '../ExternalUrl';
 
-function ReverseString5() {
-  return <div>ReverseString 5</div>;
+function Fizzbuzz() {
+  return (
+    <div>
+      <FizzBuzzMDX />
+      <ExternalUrl url="https://repl.it/@rojasleon/05-FizzBuzz" />
+    </div>
+  );
 }
 function Usage() {
-  return <ReverseString5 />;
+  return <Fizzbuzz />;
 }
-Usage.title = 'Reverse String 5';
-export { ReverseString5, Usage as default };
+Usage.title = 'Fizz Buzz';
+export { Fizzbuzz, Usage as default };
