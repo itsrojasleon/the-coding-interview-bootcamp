@@ -1,6 +1,11 @@
 import * as React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 
+// import theme from 'prism-react-renderer/themes/dracula';
+// This doesn't work with Typescript.
+// theme returns 'undefined'.
+// Change directly in node_modules/prism-react-renderer/themes/theme
+
 export interface Props {
   props: React.ReactNode;
   children: string;
