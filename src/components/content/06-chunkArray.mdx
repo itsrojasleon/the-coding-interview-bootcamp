@@ -1,0 +1,37 @@
+<span className="instructions">
+  Given an array and chunk size, divide the array into many subarrays where each
+  subarray is of length size
+</span>
+
+> <span className="ways">Two diferents ways</span>
+
+```
+// First (🍌)
+function chunk(array, size) {
+  const chunked = [];
+
+  for (element of array) {
+    const last = chunked[chunked.length - 1];
+
+    if (!last || last.length === size) {
+      chunked.push([element]);
+    } else {
+      last.push(element);
+    }
+  }
+  return chunked;
+}
+
+// Second (🍉)
+
+function chunk(array, size) {
+  const chunked = [];
+  let index = 0;
+
+  while(index < array.length) {
+    chunked.push(array.slice(index, index + size));
+    index += size;
+  }
+  return chunked;
+}
+```
