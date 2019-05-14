@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
-
 :root {
+  --text-color-1: #718096;
+  /* --background-green: #b2f5ea; */
+  --background-brown: rgb(250, 248, 245);
+  --text-color-2: rgb(174, 151, 105);
   --border-color: rgb(250, 248, 245);
   --instruction-color: rgb(100, 100, 100);
   --ways-color: rgb(50, 50, 50);
-  --title-color: rgb(178, 151, 98);
 }
-html {
+body {
   box-sizing: border-box;
   font-size: 16px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
 
 *,
@@ -30,10 +32,6 @@ ol,
 ul {
   margin: 0;
   padding: 0;
-}
-
-body {
-  background: white;
 }
 
 ol,

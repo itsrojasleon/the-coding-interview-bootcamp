@@ -6,6 +6,7 @@ import { MDXProvider } from '@mdx-js/react';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import Content from './Content';
+import Dashboard from './Dashboard';
 
 import './styles.css';
 
@@ -42,20 +43,16 @@ const filesAndTitles = files.map(filename => ({
   filename
 }));
 
-function Home() {
-  return <div>Home component</div>;
-}
-
 function App() {
   return (
-    <div>
-      <Header />
-      <div className="container">
-        <Router>
+    <Router>
+      <React.Fragment>
+        <Header />
+        <div className="container">
           <React.Fragment>
             <Sidebar filesAndTitles={filesAndTitles} />
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Dashboard} />
               <Content>
                 <Route
                   exact
@@ -80,9 +77,9 @@ function App() {
               </Content>
             </Switch>
           </React.Fragment>
-        </Router>
-      </div>
-    </div>
+        </div>
+      </React.Fragment>
+    </Router>
   );
 }
 export default hot(module)(App);

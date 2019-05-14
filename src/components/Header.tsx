@@ -1,10 +1,13 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <div className="header">
       <nav className="nav">
-        <h1 className="title-bootcamp">The coding interview bootcamp</h1>
+        <Link className="title-bootcamp" to="/">
+          The coding interview bootcamp
+        </Link>
         <div className="links">
           <a
             href="https://github.com/rojasleon/the-coding-interview-bootcamp"
