@@ -6,8 +6,12 @@ function Anagrams() {
   return (
     <div>
       <AnagramsMDX />
-      <ExternalUrl url="" />
+      <ExternalUrl url="https://repl.it/@rojasleon/07-Anagrams" />
     </div>
   );
 }
-export default Anagrams;
+function Usage() {
+  return <Anagrams />;
+}
+Usage.title = 'Anagrams';
+export { Anagrams, Usage as default };
