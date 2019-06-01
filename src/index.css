@@ -4,7 +4,6 @@
   --text-color-2: rgb(174, 151, 105);
   --border-color: rgb(250, 248, 245);
   --instruction-color: rgb(100, 100, 100);
-  --ways-color: rgb(50, 50, 50);
 }
 body {
   box-sizing: border-box;
