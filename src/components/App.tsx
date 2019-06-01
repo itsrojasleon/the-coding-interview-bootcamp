@@ -18,7 +18,7 @@ const components = {
   code: CodeBlock
 };
 
-let files: string[] = ['01', '02', '03', '04', '05', '06', '07'];
+let files: string[] = ['01', '02', '03', '04', '05', '06', '07', '08'];
 
 const pages = files.reduce((p: any, filename, index, fullArray) => {
   let exercise = require(`./exercises/${filename}`);
