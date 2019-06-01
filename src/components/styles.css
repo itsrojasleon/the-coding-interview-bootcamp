@@ -95,9 +95,14 @@
 }
 
 /* MDX Files */
+.instructions.example {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .instructions {
   color: var(--instruction-color);
+  line-height: 1.4em;
 }
 .ways {
-  color: var(--ways-color);
+  color: var(--instruction-color);
 }
