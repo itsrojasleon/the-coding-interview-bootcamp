@@ -15,32 +15,32 @@ import { CodeBlock } from './markdown/CodeBlock';
 const components = {
   h1: (props: any) => <h1 style={{ color: 'tomato' }} {...props} />,
   pre: (props: any) => <div {...props} />,
-  code: CodeBlock
+  code: CodeBlock,
 };
 
-let files: string[] = ['01', '02', '03', '04', '05', '06', '07', '08'];
+let files: string[] = ['01', '02', '03', '04', '05', '06', '07', '08', '09'];
 
 const pages = files.reduce((p: any, filename, index, fullArray) => {
   let exercise = require(`./exercises/${filename}`);
   Object.assign(exercise, {
     previous: fullArray[index - 1],
-    next: fullArray[index + 1]
+    next: fullArray[index + 1],
   });
   exercise = {
     ...exercise,
     previous: fullArray[index - 1],
-    next: fullArray[index + 1]
+    next: fullArray[index + 1],
   };
   p[filename] = {
     exercise,
-    title: exercise.default.title
+    title: exercise.default.title,
   };
   return p;
 }, {});
 
 const filesAndTitles = files.map(filename => ({
   title: pages[filename].title,
-  filename
+  filename,
 }));
 
 function App() {
@@ -48,25 +48,25 @@ function App() {
     <Router>
       <React.Fragment>
         <Header />
-        <div className="container">
+        <div className='container'>
           <React.Fragment>
             <Sidebar filesAndTitles={filesAndTitles} />
             <Switch>
-              <Route exact path="/" component={Dashboard} />
+              <Route exact path='/' component={Dashboard} />
               <Content>
                 <Route
                   exact
-                  path="/:id"
+                  path='/:id'
                   render={props => {
                     // get the id from the url
                     const { id } = props.match.params;
                     // get my component from pages
                     const {
-                      exercise: { default: Exercise }
+                      exercise: { default: Exercise },
                     } = pages[id];
                     return (
-                      <div className="content">
-                        <div className="title">{pages[id].title}.</div>
+                      <div className='content'>
+                        <div className='title'>{pages[id].title}.</div>
                         <MDXProvider components={components}>
                           <Exercise />
                         </MDXProvider>
