@@ -29,6 +29,7 @@ let files: string[] = [
   '08',
   '09',
   '10',
+  '11',
 ];
 
 const pages = files.reduce((p: any, filename, index, fullArray) => {
