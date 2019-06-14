@@ -10,7 +10,7 @@
 <div className='instructions'>vowels('Why?') --> 0</div>
 
 ```
-// first (🌶)
+// First (🌶)
 
 function vowels(str) {
 	let count = 0;
@@ -22,5 +22,13 @@ function vowels(str) {
 		}
 	}
 	return count;
+}
+
+
+// Second (🌽)
+
+function vowels(str) {
+	const matches = str.match(/[aeiou]/gi);
+	return matches ? matches.length : 0
 }
 ```
