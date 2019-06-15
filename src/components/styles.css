@@ -2,7 +2,7 @@
 .container {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
-  width: 85%;
+  width: 75%;
   margin: auto;
 }
 .content {
@@ -56,6 +56,8 @@
   border-right: 1px solid var(--border-color);
   height: 100vh;
   text-align: left;
+  position: relative;
+  overflow: auto;
 }
 .links-container {
   display: flex;
