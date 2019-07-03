@@ -8,40 +8,45 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
-        test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
+        test: /\.(ts|tsx)?$/,
+        include: path.resolve(__dirname, 'src'),
+        use: [
+          {
+            loader: 'ts-loader',
+          },
+        ],
       },
       {
         test: /.mdx?$/,
-        use: ['babel-loader', '@mdx-js/loader']
-      }
-    ]
+        use: ['babel-loader', '@mdx-js/loader'],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin({
       mdx: true,
       compilerOptions: {
-        noImplicitAny: false
-      }
-    })
-  ]
+        noImplicitAny: false,
+      },
+    }),
+  ],
 };
