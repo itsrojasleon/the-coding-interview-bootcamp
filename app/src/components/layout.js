@@ -8,16 +8,39 @@ const { Header, Content, Footer, Sider } = Layout;
 const MyLayout = ({ children }) => {
   return (
     <Layout>
+      <Header
+        style={{
+          position: 'fixed',
+          zIndex: 1,
+          width: '100%',
+          background: 'white',
+        }}
+        className="header"
+      >
+        <div className="logo" />
+        <Menu
+          theme="light"
+          mode="horizontal"
+          defaultSelectedKeys={['2']}
+          style={{ lineHeight: '64px' }}
+        >
+          <Menu.Item key="1">nav 1</Menu.Item>
+          <Menu.Item key="2">nav 2</Menu.Item>
+          <Menu.Item key="3">nav 3</Menu.Item>
+        </Menu>
+      </Header>
       <Sider
+        theme="light"
         style={{
           overflow: 'auto',
           height: '100vh',
           position: 'fixed',
+          top: 65,
           left: 0,
         }}
       >
         <div className="logo" />
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
+        <Menu theme="light" mode="inline" defaultSelectedKeys={['4']}>
           <Menu.Item key="1">
             <Icon type="user" />
             <span className="nav-text">nav 1</span>
@@ -53,8 +76,7 @@ const MyLayout = ({ children }) => {
         </Menu>
       </Sider>
       <Layout style={{ marginLeft: 200 }}>
-        <Header style={{ background: '#fff', padding: 0 }} />
-        <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
+        <Content style={{ margin: '82px 16px 0', overflow: 'initial' }}>
           <div style={{ padding: 24, background: '#fff', textAlign: 'center' }}>
             ...
             <br />
