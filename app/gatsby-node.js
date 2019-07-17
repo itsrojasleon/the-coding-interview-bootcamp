@@ -1,43 +1,94 @@
 const path = require('path');
 
-module.exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions;
+const createTagPages = (createPage, posts) => {
+  const allTagsIndexTemplate = path.resolve('src/templates/allTagsIndex.js');
+  const singleTagIndexTemplate = path.resolve(
+    'src/templates/singleTagIndex.js',
+  );
 
-  if (node.internal.type === 'MarkdownRemark') {
-    const slug = path.basename(node.fileAbsolutePath, '.md');
+  const postsByTag = {};
 
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug,
-    });
-  }
-};
-
-module.exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
-  const blogTemplate = path.resolve('./src/templates/blog.js');
-  const res = await graphql(`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
+  posts.forEach(({ node }) => {
+    if (node.frontmatter.tags) {
+      node.frontmatter.tags.forEach(tag => {
+        if (!postsByTag[tag]) {
+          postsByTag[tag] = [];
         }
-      }
-    }
-  `);
 
-  res.data.allMarkdownRemark.edges.forEach(edge => {
+        postsByTag[tag].push(node);
+      });
+    }
+  });
+
+  const tags = Object.keys(postsByTag);
+
+  createPage({
+    path: '/tags',
+    component: allTagsIndexTemplate,
+    context: {
+      tags: tags.sort(),
+    },
+  });
+
+  tags.forEach(tagName => {
+    const posts = postsByTag[tagName];
+
     createPage({
-      component: blogTemplate,
-      path: `/blog/${edge.node.fields.slug}`,
+      path: `/tags/${tagName}`,
+      component: singleTagIndexTemplate,
       context: {
-        slug: edge.node.fields.slug,
+        posts,
+        tagName,
       },
     });
+  });
+};
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+
+  return new Promise((resolve, reject) => {
+    const blogPostTemplate = path.resolve('src/templates/blogPost.js');
+
+    resolve(
+      graphql(
+        `
+          query {
+            allMarkdownRemark(
+              sort: { order: ASC, fields: [frontmatter___date] }
+            ) {
+              edges {
+                node {
+                  frontmatter {
+                    path
+                    title
+                    tags
+                  }
+                }
+              }
+            }
+          }
+        `,
+      ).then(result => {
+        const posts = result.data.allMarkdownRemark.edges;
+
+        createTagPages(createPage, posts);
+
+        posts.forEach(({ node }, index) => {
+          const path = node.frontmatter.path;
+          createPage({
+            path,
+            component: blogPostTemplate,
+            context: {
+              pathSlug: path,
+              prev: index === 0 ? null : posts[index - 1].node,
+              next: index === posts.length - 1 ? null : posts[index + 1].node,
+            },
+          });
+
+          resolve();
+        });
+      }),
+    );
   });
 };

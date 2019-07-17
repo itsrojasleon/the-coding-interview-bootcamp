@@ -1,16 +1,41 @@
 import React from 'react';
-import { SEO, Layout, Content } from '../components';
+import { graphql, Link } from 'gatsby';
+import { Layout, Content } from '../components';
+// import { Content } from '../styles/components';
 
-export default function() {
+const Index = ({ data }) => {
+  const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
       <Content>
-        {/* <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-          <Image />
-        </div> */}
-        <br />
+        {edges.map(edge => {
+          const { frontmatter } = edge.node;
+          return (
+            <div key={frontmatter.path} style={{ marginBottom: '1rem' }}>
+              <Link to={frontmatter.path}>{frontmatter.title}</Link>
+            </div>
+          );
+        })}
+        <Link to="/tags">Browse by Tag</Link>
       </Content>
     </Layout>
   );
-}
+};
+
+export const query = graphql`
+  query HomepageQuery {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            date
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default Index;
