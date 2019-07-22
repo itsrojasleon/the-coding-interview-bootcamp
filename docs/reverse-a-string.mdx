@@ -1,0 +1,44 @@
+# Reverse a String
+
+_Instructions:_
+
+- Given a string, return a new string with the reversed order of characters.
+
+_Examples:_
+
+- `reverse('apple') === 'leppa'`
+
+- `reverse('hello') === 'olleh'`
+
+- `reverse('Greetings!') === '!sgniteerG'`
+
+_Repl.it:_
+
+- <a href='https://repl.it/@rojasleon/01-reverse-a-string' target='_blank'>reverse_a_string</a>
+
+_Code:_
+
+```javascript
+// First (🍏)
+function reverseString(str) {
+  return str
+    .split('')
+    .reverse()
+    .join();
+}
+
+// Second (🍎)
+function reverseString(str) {
+  let reversed = '';
+
+  for (let char of str) {
+    reversed = char + reversed;
+  }
+  return reversed;
+}
+
+// Third (🍐)
+function reverseString(str) {
+  return str.split('').reduce((rev, char) => char + rev, '');
+}
+```
