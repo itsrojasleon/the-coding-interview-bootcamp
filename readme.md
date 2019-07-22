@@ -1,19 +1,5 @@
-# gatsby-starter-documentation
+# The Coding Interview Bootcamp
 
-A minimalist starter for
-[gatsby-theme-documentation](https://github.com/johno/gatsby-theme-documentation).
+Ace your next Javascript coding interview by mastering data structures and algorithms.
 
-![image](https://user-images.githubusercontent.com/1424573/61085901-ace8e980-a3ee-11e9-84d2-45acbb200fea.png)
-
-## Installation
-
-```sh
-gatsby new my-docs-site johno/gatsby-starter-documentation
-cd my-docs-site
-```
-
-## Usage
-
-```sh
-yarn start
-```
+This project is based on an Udemy course by [Stephen Grider](https://twitter.com/ste_grider) You can check the course [here](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/).
